@@ -11,8 +11,15 @@ const client = new Client({
     ]
 });
 
-client.on('ready', (c)=> {
-    console.log("The bot is active")
+client.on('ready', (c) => {
+    console.log(`${c.user.tag} is active.`)
+})
+
+client.on('messageCreate', (message)=> {
+    console.log(message)
+    if(message.content){
+        message.reply("Active and ready to obey");
+    }
 })
 
 client.login(properties.DISCORD_KEY);
