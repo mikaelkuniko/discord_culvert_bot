@@ -1,4 +1,4 @@
-import properties from './properties';
+import {properties} from './properties';
 
 const {Client, IntentsBitField} = require('discord.js');
 
@@ -11,4 +11,14 @@ const client = new Client({
     ]
 });
 
-client.login(properties.DISCORD_KEY)
+client.on('ready', (c)=> {
+    console.log("The bot is active")
+})
+
+client.login(properties.DISCORD_KEY);
+
+
+
+
+
+
