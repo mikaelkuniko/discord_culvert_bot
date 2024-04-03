@@ -1,3 +1,5 @@
+import properties from './properties';
+
 const {Client, IntentsBitField} = require('discord.js');
 
 const client = new Client({
@@ -9,3 +11,4 @@ const client = new Client({
     ]
 });
 
+client.login(properties.DISCORD_KEY)
