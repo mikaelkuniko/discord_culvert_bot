@@ -1,4 +1,4 @@
-import {properties} from './properties';
+import properties from '../src/properties'
 
 const {Client, IntentsBitField} = require('discord.js');
 
