@@ -1,8 +1,8 @@
-import properties from '../src/properties'
+import properties from '../src/properties.js'
 
-const {Client, IntentsBitField} = require('discord.js');
+// const {Client, IntentsBitField} = require('discord.js');
 
-// import { Client, IntentsBitField } from 'discord.js';
+import { Client, IntentsBitField } from 'discord.js';
 
 const client = new Client({
     intents: [
@@ -17,12 +17,12 @@ client.on('ready', (c) => {
     console.log(`${c.user.tag} is active.`)
 })
 
-client.on('messageCreate', (message)=> {
-    console.log(message)
-    if(message.content){
-        message.reply("Active and ready to obey");
-    }
-})
+// client.on('messageCreate', (message)=> {
+//     console.log(message)
+//     if(message.content){
+//         message.reply("Active and ready to obey");
+//     }
+// })
 
 client.login(properties.DISCORD_KEY);
 
