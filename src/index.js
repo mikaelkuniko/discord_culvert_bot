@@ -18,6 +18,12 @@ client.on('ready', (c) => {
     console.log(`${c.user.tag} is active.`)
 })
 
+client.on('interactionCreate', (interaction)=>{
+    if(!interaction.isChatInputCommand()) return;
+
+    console.log("this is the interaction", interaction)
+})
+
 client.on('messageCreate', (message)=> {
     if(message.author.bot) return
     console.log(message)
