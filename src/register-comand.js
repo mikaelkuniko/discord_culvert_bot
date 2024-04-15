@@ -1,10 +1,16 @@
 const {REST, Routes} = require('discord.js');
 require('dotenv').config();
 
+// run this file in node to register the commands
+
 const commands = [ 
     {
         name: 'hey',
         description: "Replies with hey!",
+    },
+    {
+        name: 'ping',
+        description: "Pong!",
     },
 ];
 

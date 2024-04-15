@@ -21,7 +21,16 @@ client.on('ready', (c) => {
 client.on('interactionCreate', (interaction)=>{
     if(!interaction.isChatInputCommand()) return;
 
-    console.log("this is the interaction", interaction)
+    if(interaction.commandName === 'hey'){
+        interaction.reply("hey!")
+    }
+
+    if(interaction.commandName === 'ping'){
+        interaction.reply("Pong!")
+    }
+
+    console.log("this is the interaction object", interaction)
+    console.log("this is command name", interaction.commandName)
 })
 
 client.on('messageCreate', (message)=> {
