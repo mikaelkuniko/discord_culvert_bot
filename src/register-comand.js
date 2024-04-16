@@ -33,14 +33,6 @@ const commands = [
                         name: 'three',
                         value: 3,
                     },
-                    {
-                        name: 'four',
-                        value: 4,
-                    },
-                    {
-                        name: 'five',
-                        value: 5,
-                    },
                 ],
                 required: true,
             },
