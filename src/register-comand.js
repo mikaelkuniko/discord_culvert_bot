@@ -1,4 +1,4 @@
-const {REST, Routes} = require('discord.js');
+const {REST, Routes, ApplicationCommandOptionType} = require('discord.js');
 require('dotenv').config();
 
 // run this file in node to register the commands
@@ -12,6 +12,24 @@ const commands = [
         name: 'ping',
         description: "Pong!",
     },
+    {
+        name: 'add',
+        description: 'Adds two numbers.',
+        options: [
+            {
+                name: 'first-number',
+                description: 'The first number.',
+                type: ApplicationCommandOptionType.Number,
+                required: true,
+            },
+            {
+                name: 'second-number',
+                description: 'The second number.',
+                type: ApplicationCommandOptionType.Number,
+                required: true,
+            },
+        ]
+    }
 ];
 
 const rest = new REST({ version: '10'}).setToken(process.env.TOKEN);

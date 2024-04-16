@@ -29,6 +29,15 @@ client.on('interactionCreate', (interaction)=>{
         interaction.reply("Pong!")
     }
 
+    if(interaction.commandName === 'add'){
+        const num1 = interaction.options.get('first-number').value;
+        const num2 = interaction.options.get('second-number').value;
+        const total = num1 + num2
+
+        console.log("this is num1 object: ", num1)
+        interaction.reply(`The sum is ${total}!`)
+    }
+
     console.log("this is the interaction object", interaction)
     console.log("this is command name", interaction.commandName)
 })
