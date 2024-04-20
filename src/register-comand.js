@@ -5,6 +5,10 @@ require('dotenv').config();
 
 const commands = [ 
     {
+        name: "embed",
+        description: "send a embed"
+    },
+    {
         name: 'hey',
         description: "Replies with hey!",
     },
