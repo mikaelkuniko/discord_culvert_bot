@@ -41,7 +41,8 @@ client.on('interactionCreate', (interaction)=>{
     if(interaction.commandName === "embed"){
         const embed = EmbedBuilder()
             .setTitle('Embed title')
-            .setDescripton("This is the embed descritipion");
+            .setDescripton("This is the embed descritipion")
+            .setColor('Random');
 
         interaction.reply({
             embeds: [embed]
