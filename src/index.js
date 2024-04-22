@@ -47,6 +47,11 @@ client.on('interactionCreate', (interaction)=>{
                 name: 'Field Title',
                 value: "Some random value",
                 inline: true,
+            },
+            {
+                name: 'Second Field Title',
+                value: "Some random value",
+                inline: true,
             });
 
         interaction.reply({
@@ -58,7 +63,30 @@ client.on('interactionCreate', (interaction)=>{
     console.log("this is command name", interaction.commandName)
 })
 
+client.on('messageCreate', (message) => {
+    if(message.content === 'embed'){
+        const embed = EmbedBuilder()
+        .setTitle('Embed title')
+        .setDescripton("This is the embed descritipion")
+        .setColor('Random')
+        .addFields({
+            name: 'Field Title',
+            value: "Some random value",
+            inline: true,
+        },
+        {
+            name: 'Second Field Title',
+            value: "Some random value",
+            inline: true,
+        });
+
+        message.channel.send({embed: [embed]})
+    }
+})
+
+
 client.on('messageCreate', (message)=> {
+    // listens to the message created i.e what anyone types in the discord
     if(message.author.bot) return
     console.log(message)
     console.log("This is the message content: ", message.content);
