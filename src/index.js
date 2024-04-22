@@ -3,7 +3,7 @@
 // import { Client, IntentsBitField } from 'discord.js';
 
 require('dotenv').config()
-const {Client, IntentsBitField} = require('discord.js')
+const {Client, IntentsBitField, EmbedBuilder} = require('discord.js')
 
 const client = new Client({
     intents: [
@@ -36,6 +36,16 @@ client.on('interactionCreate', (interaction)=>{
 
         console.log("this is num1 object: ", num1)
         interaction.reply(`The sum is ${total}!`)
+    }
+
+    if(interaction.commandName === "embed"){
+        const embed = EmbedBuilder()
+            .setTitle('Embed title')
+            .setDescripton("This is the embed descritipion");
+
+        interaction.reply({
+            embeds: [embed]
+        });
     }
 
     console.log("this is the interaction object", interaction)
