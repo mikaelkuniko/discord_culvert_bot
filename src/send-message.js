@@ -39,9 +39,11 @@ client.on('ready', async (c) => {
         components: [row],
     });
 
+    process.exit();
+    
     } catch(error) {
         console.log(error);
     }
 });
-process.exit();
+
 client.login(process.env.TOKEN);
