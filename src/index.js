@@ -18,14 +18,25 @@ client.on('ready', (c) => {
     console.log(`${c.user.tag} is active.`)
 })
 
-client.on('interactionCreate', (interaction)=>{
+client.on('interactionCreate', async (interaction)=>{
     if(!interaction.isChatInputCommand()) return;
 
     if(!interaction.isButton()) return;
+    await interaction.deferReply({ ephemeral: true})
 
     const role = interaction.guild.roles.cache.get(interaction.customId);
 
-    
+    if(!role){
+        interaction.reply({
+            content: "I couldn't find that role!",
+        })
+        return;
+    }
+
+    const hasRole = interaction.member.roles.cache.has(role.id);
+    if (hasRole){
+        await interaction
+    }
 
     if(interaction.commandName === 'hey'){
         interaction.reply("hey!")
