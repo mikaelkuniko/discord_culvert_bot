@@ -21,6 +21,12 @@ client.on('ready', (c) => {
 client.on('interactionCreate', (interaction)=>{
     if(!interaction.isChatInputCommand()) return;
 
+    if(!interaction.isButton()) return;
+
+    const role = interaction.guild.roles.cache.get(interaction.customId);
+
+    
+
     if(interaction.commandName === 'hey'){
         interaction.reply("hey!")
     }

@@ -1,5 +1,6 @@
+
 require('dotenv').config();
-const {Client, IntentsBitsField, ActionRowBuilder, ButtonBuilder, ButtonStyle} = require('discord.js');
+const {Client, IntentsBitField, ActionRowBuilder, ButtonBuilder, ButtonStyle} = require('discord.js');
 
 const client = new Client({
     intents: [
@@ -40,7 +41,7 @@ client.on('ready', async (c) => {
     });
 
     process.exit();
-    
+
     } catch(error) {
         console.log(error);
     }
