@@ -35,7 +35,9 @@ client.on('interactionCreate', async (interaction)=>{
 
     const hasRole = interaction.member.roles.cache.has(role.id);
     if (hasRole){
-        await interaction
+        await interaction.member.roles.remove(role);
+        await interaction.editReply(`The role ${role} has been removed.`)
+        return;
     }
 
     if(interaction.commandName === 'hey'){
