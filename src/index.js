@@ -33,11 +33,10 @@ let status = [
 client.on('ready', (c) => {
     console.log(`${c.user.tag} is active.`)
 
-    client.user.setActivity({
-        name: "Not like us",
-        type: ActivityType.Streaming,
-        url: 'https://www.youtube.com/watch?v=T6eK-2OQtew&ab_channel=KendrickLamar'
-    })
+    setInterval(()=> {
+        let random =  Math.floor(Math.random() * status.length);
+        client.user.setActivity(status[random])
+    }, 10000);
 })
 
 client.on('interactionCreate', async (interaction)=>{
