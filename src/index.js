@@ -16,6 +16,10 @@ const client = new Client({
 
 client.on('ready', (c) => {
     console.log(`${c.user.tag} is active.`)
+
+    client.user.setActivity({
+        name: "Culvert bot"
+    })
 })
 
 client.on('interactionCreate', async (interaction)=>{
