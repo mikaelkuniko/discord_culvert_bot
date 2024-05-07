@@ -3,7 +3,7 @@
 // import { Client, IntentsBitField } from 'discord.js';
 
 require('dotenv').config()
-const {Client, IntentsBitField, EmbedBuilder} = require('discord.js')
+const {Client, IntentsBitField, EmbedBuilder, ActivityType} = require('discord.js')
 
 const client = new Client({
     intents: [
@@ -18,7 +18,9 @@ client.on('ready', (c) => {
     console.log(`${c.user.tag} is active.`)
 
     client.user.setActivity({
-        name: "Culvert bot"
+        name: "Not like us",
+        type: ActivityType.Streaming,
+        url: 'https://www.youtube.com/watch?v=T6eK-2OQtew&ab_channel=KendrickLamar'
     })
 })
 
