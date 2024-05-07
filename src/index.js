@@ -14,6 +14,22 @@ const client = new Client({
     ]
 });
 
+let status = [
+    {
+        name: "Not like us",
+        type: ActivityType.Streaming,
+        url: 'https://www.youtube.com/watch?v=T6eK-2OQtew&ab_channel=KendrickLamar'
+    },
+    {
+        name: "Culvert Bot",
+    },
+    {
+        name: "The Heart, Part VI",
+        type: ActivityType.Streaming,
+        url: 'https://www.youtube.com/watch?v=HJeY-FXidDQ&ab_channel=Drake'
+    }
+]
+
 client.on('ready', (c) => {
     console.log(`${c.user.tag} is active.`)
 
