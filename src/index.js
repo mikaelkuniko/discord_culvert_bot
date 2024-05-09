@@ -78,6 +78,10 @@ client.on('interactionCreate', async (interaction)=>{
         interaction.reply("Pong!")
     }
 
+    if(interaction.commandName === 'boogeyman'){
+        interaction.reply('Kendrick Lamar')
+    }
+
     if(interaction.commandName === 'add'){
         const num1 = interaction.options.get('first-number').value;
         const num2 = interaction.options.get('second-number').value;
