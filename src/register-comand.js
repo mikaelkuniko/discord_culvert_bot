@@ -17,6 +17,10 @@ const commands = [
         description: "Pong!",
     },
     {
+        name: 'boogeyman',
+        description: 'Whose the boogeyman?',
+    },
+    {
         name: 'add',
         description: 'Adds two numbers.',
         options: [
