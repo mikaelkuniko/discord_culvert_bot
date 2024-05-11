@@ -79,7 +79,7 @@ client.on('interactionCreate', async (interaction)=>{
     }
 
     if(interaction.commandName === 'boogeyman'){
-        interaction.reply('Kendrick Lamar')
+        interaction.reply('wop wop wop wop ima do my stuff')
     }
 
     if(interaction.commandName === 'add'){
