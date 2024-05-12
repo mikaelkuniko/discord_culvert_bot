@@ -21,6 +21,10 @@ const commands = [
         description: 'Whose the boogeyman?',
     },
     {
+        name: 'culv',
+        description: 'Tracks your culvert'
+    },
+    {
         name: 'add',
         description: 'Adds two numbers.',
         options: [
