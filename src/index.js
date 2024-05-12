@@ -83,7 +83,7 @@ client.on('interactionCreate', async (interaction)=>{
     }
 
     if(interaction.commandName === 'culvert'){
-    
+        console.log('This is the interaction object', interaction)
     }
 
     if(interaction.commandName === 'add'){
