@@ -63,7 +63,7 @@ client.on('interactionCreate', async (interaction)=>{
         }
     
         await interaction.member.roles.add(role);
-        await interaction.editReply(`Te role ${role} has been added.`)
+        await interaction.editReply(`The role ${role} has been added.`)
     
         
     } catch (error) {
@@ -80,6 +80,10 @@ client.on('interactionCreate', async (interaction)=>{
 
     if(interaction.commandName === 'boogeyman'){
         interaction.reply('wop wop wop wop ima do my stuff')
+    }
+
+    if(interaction.commandName === 'culvert'){
+    
     }
 
     if(interaction.commandName === 'add'){
