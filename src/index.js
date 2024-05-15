@@ -82,8 +82,9 @@ client.on('interactionCreate', async (interaction)=>{
         interaction.reply('wop wop wop wop ima do my stuff')
     }
 
-    if(interaction.commandName === 'culvert'){
+    if(interaction.commandName === 'culv'){
         console.log('This is the interaction object', interaction)
+        interaction.reply(`${interaction}`)
     }
 
     if(interaction.commandName === 'add'){
@@ -147,11 +148,12 @@ client.on('messageCreate', (message)=> {
     if(message.author.bot) return
     console.log(message)
     console.log("This is the message content: ", message.content);
-    if(message.content){
-        message.reply("Hello I am a bot")
-    }
     if(message.content == "activate"){
         message.reply("Active and ready to obey");
+        return;
+    }
+    if(message.content){
+        message.reply("Hello I am a bot")
     }
 })
 
