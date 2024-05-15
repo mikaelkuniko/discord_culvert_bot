@@ -33,6 +33,7 @@ let status = [
 client.on('ready', (c) => {
     console.log(`${c.user.tag} is active.`)
 
+    // cycles through a status for the bot every 10000ms
     setInterval(()=> {
         let random =  Math.floor(Math.random() * status.length);
         client.user.setActivity(status[random])
@@ -43,6 +44,7 @@ client.on('interactionCreate', async (interaction)=>{
     if(!interaction.isChatInputCommand()) return;
 
     try {
+        // allows user to claim a role
         if(!interaction.isButton()) return;
         await interaction.deferReply({ ephemeral: true})
     
