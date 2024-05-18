@@ -58,6 +58,7 @@ client.on('interactionCreate', async (interaction)=>{
         }
     
         const hasRole = interaction.member.roles.cache.has(role.id);
+        // if the user clicks the role and has it already it removes the role
         if (hasRole){
             await interaction.member.roles.remove(role);
             await interaction.editReply(`The role ${role} has been removed.`)
