@@ -42,10 +42,13 @@ client.on('ready', (c) => {
 
 client.on('interactionCreate', async (interaction)=>{
     if(!interaction.isChatInputCommand()) return;
-
+    console.log(interaction)
+    
     try {
         // allows user to claim a role
         if(!interaction.isButton()) return;
+
+
         await interaction.deferReply({ ephemeral: true})
     
         const role = interaction.guild.roles.cache.get(interaction.customId);

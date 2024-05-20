@@ -23,7 +23,7 @@ const commands = [
     {
         name: 'culv',
         description: 'Tracks your culvert',
-        type: ApplicationCommandOptionType.Number,
+        // type: ApplicationCommandOptionType.Number,
     },
     {
         name: 'add',
