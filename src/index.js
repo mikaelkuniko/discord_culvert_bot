@@ -77,6 +77,7 @@ client.on('interactionCreate', async (interaction)=>{
     }
    
     if(interaction.commandName === 'hey'){
+        console.log(interaction)
         interaction.reply("hey!")
     }
 
