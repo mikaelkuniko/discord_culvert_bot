@@ -23,6 +23,13 @@ const commands = [
     {
         name: 'culv',
         description: 'Tracks your culvert',
+        options: [
+            {
+                name: 'Culvert Score',
+                description: "How much you scored this week",
+                type: ApplicationCommandOptionType.Number,
+            }
+        ]
         // type: ApplicationCommandOptionType.Number,
     },
     {
