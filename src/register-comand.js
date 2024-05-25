@@ -25,7 +25,7 @@ const commands = [
         description: 'Tracks your culvert',
         options: [
             {
-                name: 'Score',
+                name: 'score',
                 description: "Score this week",
                 type: ApplicationCommandOptionType.Number,
                 required: true,
