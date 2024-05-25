@@ -92,7 +92,7 @@ client.on('interactionCreate', async (interaction)=>{
     if(interaction.commandName === 'culv'){
         console.log('This is the interaction object', interaction)
         interaction.reply(`${interaction}`)
-        message.reply(`${interaction}`)
+        // message.reply(`${interaction}`)
     }
 
     if(interaction.commandName === 'add'){
