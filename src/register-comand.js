@@ -26,7 +26,7 @@ const commands = [
         options: [
             {
                 name: 'score',
-                description: "Score this week",
+                description: "Score for this week",
                 type: ApplicationCommandOptionType.Number,
                 required: true,
             }
