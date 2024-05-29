@@ -39,7 +39,7 @@ const commands = [
         options: [
             {
                 name: 'first-number',
-                description: 'The first number.',
+                description: 'The first number to add.',
                 type: ApplicationCommandOptionType.Number,
                 choices: [
                     {
@@ -59,7 +59,7 @@ const commands = [
             },
             {
                 name: 'second-number',
-                description: 'The second number.',
+                description: 'The second number to add.',
                 type: ApplicationCommandOptionType.Number,
                 required: true,
             },
