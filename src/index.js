@@ -42,40 +42,8 @@ client.on('ready', (c) => {
 
 client.on('interactionCreate', async (interaction)=>{
     if(!interaction.isChatInputCommand()) return;
-    console.log(interaction)
+    console.log("this is interaction in interaction create", interaction)
     
-    try {
-        // allows user to claim a role
-        if(!interaction.isButton()) return;
-
-
-        await interaction.deferReply({ ephemeral: true})
-    
-        const role = interaction.guild.roles.cache.get(interaction.customId);
-    
-        if(!role){
-            interaction.reply({
-                content: "I couldn't find that role!",
-            })
-            return;
-        }
-    
-        const hasRole = interaction.member.roles.cache.has(role.id);
-        // if the user clicks the role and has it already it removes the role
-        if (hasRole){
-            await interaction.member.roles.remove(role);
-            await interaction.editReply(`The role ${role} has been removed.`)
-            return;
-        }
-    
-        await interaction.member.roles.add(role);
-        await interaction.editReply(`The role ${role} has been added.`)
-    
-        
-    } catch (error) {
-        console.log(error)
-    }
-   
     if(interaction.commandName === 'hey'){
         console.log(interaction)
         interaction.reply("hey!")
@@ -124,6 +92,38 @@ client.on('interactionCreate', async (interaction)=>{
         interaction.reply({
             embeds: [embed]
         });
+    }
+    
+    try {
+        // allows user to claim a role
+        if(!interaction.isButton()) return;
+
+
+        await interaction.deferReply({ ephemeral: true})
+    
+        const role = interaction.guild.roles.cache.get(interaction.customId);
+    
+        if(!role){
+            interaction.reply({
+                content: "I couldn't find that role!",
+            })
+            return;
+        }
+    
+        const hasRole = interaction.member.roles.cache.has(role.id);
+        // if the user clicks the role and has it already it removes the role
+        if (hasRole){
+            await interaction.member.roles.remove(role);
+            await interaction.editReply(`The role ${role} has been removed.`)
+            return;
+        }
+    
+        await interaction.member.roles.add(role);
+        await interaction.editReply(`The role ${role} has been added.`)
+    
+        
+    } catch (error) {
+        console.log(error)
     }
 
     console.log("this is the interaction object", interaction)
