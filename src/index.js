@@ -44,18 +44,14 @@ client.on('interactionCreate', async (interaction)=>{
     if(!interaction.isChatInputCommand()) return;
     console.log("this is interaction in interaction create", interaction)
     
-    if(interaction.commandName === 'hey'){
-        console.log(interaction)
-        interaction.reply("hey!")
-    }
 
-    if(interaction.commandName === 'ping'){
-        interaction.reply("Pong!")
-    }
+    // if(interaction.commandName === 'ping'){
+    //     interaction.reply("Pong!")
+    // }
 
-    if(interaction.commandName === 'boogeyman'){
-        interaction.reply('wop wop wop wop ima do my stuff')
-    }
+    // if(interaction.commandName === 'boogeyman'){
+    //     interaction.reply('wop wop wop wop ima do my stuff')
+    // }
 
     if(interaction.commandName === 'culv'){
         console.log('This is the interaction object', interaction)
@@ -93,7 +89,7 @@ client.on('interactionCreate', async (interaction)=>{
             embeds: [embed]
         });
     }
-    
+
     try {
         // allows user to claim a role
         if(!interaction.isButton()) return;
