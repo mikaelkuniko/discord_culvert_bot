@@ -8,18 +8,18 @@ const commands = [
         name: "embed",
         description: "send a embed"
     },
-    {
-        name: 'hey',
-        description: "Replies with hey!",
-    },
-    {
-        name: 'ping',
-        description: "Pong!",
-    },
-    {
-        name: 'boogeyman',
-        description: 'Whose the boogeyman?',
-    },
+    // {
+    //     name: 'hey',
+    //     description: "Replies with hey!",
+    // },
+    // {
+    //     name: 'ping',
+    //     description: "Pong!",
+    // },
+    // {
+    //     name: 'boogeyman',
+    //     description: 'Whose the boogeyman?',
+    // },
     {
         name: 'culv',
         description: 'Tracks your culvert',
