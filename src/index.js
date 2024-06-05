@@ -55,8 +55,10 @@ client.on('interactionCreate', async (interaction)=>{
 
     if(interaction.commandName === 'culv'){
         console.log('This is the interaction object', interaction)
-        interaction.reply(`${interaction}`)
-        message.reply(`This command works`)
+        const score = interaction.options.get('score').value;
+
+        // interaction.reply(`${interaction}`)
+        interaction.reply(`${score}`)
         // message.reply(`${interaction}`)
     }
 
