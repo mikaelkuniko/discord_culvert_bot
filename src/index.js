@@ -56,9 +56,9 @@ client.on('interactionCreate', async (interaction)=>{
     if(interaction.commandName === 'culv'){
         console.log('This is the interaction object', interaction)
         const score = interaction.options.get('score').value;
-        console.log("this is the interaction options object", interaction.options)
+        // console.log("this is the interaction options object", interaction.options)
         // interaction.reply(`${interaction}`)
-        interaction.reply(`${score}`)
+        interaction.reply(`${score} for this week!`)
         // message.reply(`${interaction}`)
     }
 
@@ -123,9 +123,6 @@ client.on('interactionCreate', async (interaction)=>{
     } catch (error) {
         console.log(error)
     }
-
-    console.log("this is the interaction object", interaction)
-    console.log("this is command name", interaction.commandName)
 })
 
 client.on('messageCreate', (message) => {
