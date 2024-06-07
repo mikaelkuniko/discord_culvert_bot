@@ -58,6 +58,7 @@ client.on('interactionCreate', async (interaction)=>{
         const score = interaction.options.get('score').value;
         // console.log("this is the interaction options object", interaction.options)
         // interaction.reply(`${interaction}`)
+        
         interaction.reply(`${score} for this week!`)
         // message.reply(`${interaction}`)
     }
@@ -67,7 +68,7 @@ client.on('interactionCreate', async (interaction)=>{
         const num2 = interaction.options.get('second-number').value;
         const total = num1 + num2
 
-        console.log("this is num1 object: ", num1)
+        // console.log("this is num1 object: ", num1)
         interaction.reply(`The sum is ${total}!`)
     }
 
