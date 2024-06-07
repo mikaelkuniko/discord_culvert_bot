@@ -58,7 +58,11 @@ client.on('interactionCreate', async (interaction)=>{
         const score = interaction.options.get('score').value;
         // console.log("this is the interaction options object", interaction.options)
         // interaction.reply(`${interaction}`)
-        
+        // store scores on a week to week basis on a database
+        // check if score is higher for a reply
+        // (if score >= max){
+            // interaction.reply(`New culvert PB congrats! ${score} for this week!)
+        // }
         interaction.reply(`${score} for this week!`)
         // message.reply(`${interaction}`)
     }
