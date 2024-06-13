@@ -57,7 +57,7 @@ client.on('interactionCreate', async (interaction)=>{
         console.log('This is the interaction object', interaction)
         const score = interaction.options.get('score').value;
         // console.log("this is the interaction options object", interaction.options)
-        // interaction.reply(`${interaction}`)
+        // set up backend for discord bot
         // store scores on a week to week basis on a database
         // check if score is higher for a reply
         // (if score >= max){
