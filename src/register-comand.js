@@ -26,6 +26,7 @@ const commands = [
         options: [
             {
                 name: 'score',
+                // name should be lower case one word to pull value from
                 description: "Score for this week",
                 type: ApplicationCommandOptionType.Number,
                 required: true,
