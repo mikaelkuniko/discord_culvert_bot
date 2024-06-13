@@ -82,12 +82,12 @@ client.on('interactionCreate', async (interaction)=>{
             .setDescripton("All culvert scored")
             .setColor('Black')
             .addFields({
-                name: 'Field Title',
+                name: 'Scores',
                 value: "Culvert Scores",
                 inline: true,
             },
             {
-                name: 'Second Field Title',
+                name: 'Personal Best',
                 value: "Culvert Max",
                 inline: true,
             });
