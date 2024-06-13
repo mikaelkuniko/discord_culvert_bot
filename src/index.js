@@ -76,11 +76,11 @@ client.on('interactionCreate', async (interaction)=>{
         interaction.reply(`The sum is ${total}!`)
     }
 
-    if(interaction.commandName === "embed"){
+    if(interaction.commandName === "graph"){
         const embed = EmbedBuilder()
-            .setTitle('Embed title')
-            .setDescripton("This is the embed descritipion")
-            .setColor('Random')
+            .setTitle('Culvert Graph')
+            .setDescripton("All culvert scored")
+            .setColor('Black')
             .addFields({
                 name: 'Field Title',
                 value: "Some random value",
