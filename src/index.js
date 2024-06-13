@@ -83,12 +83,12 @@ client.on('interactionCreate', async (interaction)=>{
             .setColor('Black')
             .addFields({
                 name: 'Field Title',
-                value: "Some random value",
+                value: "Culvert Scores",
                 inline: true,
             },
             {
                 name: 'Second Field Title',
-                value: "Some random value",
+                value: "Culvert Max",
                 inline: true,
             });
 
