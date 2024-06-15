@@ -83,12 +83,12 @@ client.on('interactionCreate', async (interaction)=>{
             .setColor('Black')
             .addFields({
                 name: 'Scores',
-                value: "Culvert Scores",
+                value: "score",
                 inline: true,
             },
             {
                 name: 'Personal Best',
-                value: "Culvert Max",
+                value: "max",
                 inline: true,
             });
 
