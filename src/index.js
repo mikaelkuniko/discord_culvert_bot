@@ -79,7 +79,7 @@ client.on('interactionCreate', async (interaction)=>{
     if(interaction.commandName === "graph"){
         const embed = EmbedBuilder()
             .setTitle('Culvert Graph')
-            .setDescripton("All culvert scored")
+            .setDescripton("All culvert scores")
             .setColor('Black')
             .addFields({
                 name: 'Scores',
