@@ -21,7 +21,7 @@ router.post(
                 "message": "Validation error",
                 "statusCode": 400,
                 "errors": {
-                    "user": "Invalid user"
+                    "user": "User not found"
                 }
             })
         }
