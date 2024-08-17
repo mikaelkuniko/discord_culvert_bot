@@ -21,13 +21,14 @@ router.post(
             }
         })
 
-        if(!user){
+        if(!user || !score){
             res.status(400);
             return res.json({
                 "message": "Validation error",
                 "statusCode": 400,
                 "errors": {
-                    "user": "User not found"
+                    "user": "User not found",
+                    "score": "Score is required"
                 }
             })
         }
