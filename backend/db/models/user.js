@@ -3,6 +3,10 @@ const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
+    toSafeObject() {
+      const { id, username, email } = this; // context will be the User instance
+      return { id, username, email };
+    }
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
