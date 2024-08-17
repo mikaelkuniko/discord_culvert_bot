@@ -9,9 +9,15 @@ router.post(
     async (req, res, next) => {
         const {user, score} = req.body
 
-        let checkUser = await User.findOne({
+        // let checkUser = await User.findOne({
+        //     where: {
+        //         user: req.body.user
+        //     }
+        // })
+
+        let checkScore = await User.findOne({
             where: {
-                user: req.body.user
+                score: req.body.score
             }
         })
 
