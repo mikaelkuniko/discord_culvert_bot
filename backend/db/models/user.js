@@ -22,7 +22,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   User.init({
-    user: DataTypes.STRING,
+    user: {
+      type: DataTypes.STRING,
+    allowNull: false
+  },
     score: DataTypes.NUMBER
   }, {
     sequelize,
