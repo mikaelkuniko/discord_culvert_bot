@@ -28,7 +28,10 @@ module.exports = (sequelize, DataTypes) => {
   },
     score: {
       type: DataTypes.NUMBER,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1, 200]
+      }
     }
   }, {
     sequelize,
