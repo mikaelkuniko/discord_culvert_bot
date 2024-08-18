@@ -24,9 +24,10 @@ module.exports = (sequelize, DataTypes) => {
   User.init({
     user: {
       type: DataTypes.STRING,
-    allowNull: false
+      allowNull: false
   },
-    score: DataTypes.NUMBER
+    score: {
+      type: DataTypes.NUMBER,}
   }, {
     sequelize,
     modelName: 'User',
