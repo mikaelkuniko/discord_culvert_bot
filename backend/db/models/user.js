@@ -27,7 +27,9 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
   },
     score: {
-      type: DataTypes.NUMBER,}
+      type: DataTypes.NUMBER,
+      allowNull: false
+    }
   }, {
     sequelize,
     modelName: 'User',
