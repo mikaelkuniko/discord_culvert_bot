@@ -8,7 +8,8 @@ if (process.env.NODE_ENV === 'production') {
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  up: async (queryInterface, Sequelize) => {
+     options.tableName = 'Users';
     /**
      * Add seed commands here.
      *
