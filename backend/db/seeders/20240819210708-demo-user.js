@@ -6,10 +6,26 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-/** @type {import('sequelize-cli').Migration} */
+// /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   up: async (queryInterface, Sequelize) => {
      options.tableName = 'Users';
+     return queryInterface.bulkInsert(options, [
+      {
+        user: 'Myko',
+        score: 97438 
+      },
+      {
+          user: "Lils",
+          score: 78393
+      }, 
+      {
+        user: 'Serg',
+        score: 63721
+        
+      }
+
+     ], {});
     /**
      * Add seed commands here.
      *
