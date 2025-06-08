@@ -36,7 +36,7 @@ module.exports = {
       {
         user: 'Alpha',
         score: 192014
-      }
+      },
 
      ], {});
     /**
