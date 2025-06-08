@@ -28,6 +28,10 @@ module.exports = {
         user: 'Sean',
         score: 31496
         
+      },
+      {
+        user: 'Anya',
+        score: 312304
       }
 
      ], {});
