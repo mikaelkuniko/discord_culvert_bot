@@ -25,7 +25,7 @@ module.exports = {
         
       },
       {
-        user: 'Aggy',
+        user: 'Sean',
         score: 31496
         
       }
