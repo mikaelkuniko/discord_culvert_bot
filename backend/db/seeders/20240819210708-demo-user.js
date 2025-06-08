@@ -23,6 +23,11 @@ module.exports = {
         user: 'Serg',
         score: 63721
         
+      },
+      {
+        user: 'Aggy',
+        score: 31496
+        
       }
 
      ], {});
